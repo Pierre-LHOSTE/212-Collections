@@ -1,13 +1,11 @@
 {
   "name": "212-collections-app",
   "version": "1.0.0",
-  "description": "",
+  "author": "vingt-douze",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
   },
-  "keywords": [],
-  "author": "",
   "devDependencies": {
     "electron": "^24.0.0"
   }
