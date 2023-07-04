@@ -233,7 +233,7 @@ export default function ItemModal({ collectionId }: { collectionId: string }) {
             label="Description"
             tooltip="The description of the new item"
           >
-            <Input.TextArea rows={3} allowClear />
+            <Input.TextArea rows={3} />
           </Form.Item>
           <Form.Item label="Image">
             {imageData.data === null || imageData.data === "" ? (
