@@ -5,10 +5,6 @@ import { useEffect, useRef, useState } from "react";
 export default function Options({ editFunction, deleteFunction, type }: any) {
   const [confirmVisible, setConfirmVisible] = useState(false);
 
-  useEffect(() => {
-    console.log(confirmVisible);
-  }, [confirmVisible, setConfirmVisible]);
-
   const items = [
     {
       label: "Edit collection",

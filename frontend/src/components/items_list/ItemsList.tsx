@@ -27,7 +27,7 @@ export default function ItemsList({
       ))}
       {Array.from({ length: 10 }, (_, index) => index).map((index) => (
         <li key={index}>
-          {collection.view === "antd-card" ? <ItemVoid size={300} /> : null}
+          <ItemVoid size={300} />
         </li>
       ))}
     </ul>

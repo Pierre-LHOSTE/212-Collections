@@ -6,7 +6,14 @@
     "install-frontend": "cd frontend && npm install",
     "install-backend": "cd backend && npm install",
     "install-app": "cd app && npm install",
-    "install-all": "npm-run-all install-frontend install-backend install-app"
+    "install-all": "npm-run-all --parallel install-frontend install-backend install-app",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start",
+    "start-web": "npm-run-all --parallel start-frontend start-backend",
+    "start-app": "cd app && npm start",
+    "build-frontend": "cd frontend && npm run build",
+    "build-app": "cd app && npm run build-all",
+    "build-all": "npm run build-frontend && npm run build-app"
   },
   "repository": {
     "type": "git",

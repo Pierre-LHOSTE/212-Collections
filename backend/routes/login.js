@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 
+const secret_key = "idk-how-to-hide-it-😭";
+
 function api(fastify, opts, next) {
   fastify.post("/login", async (request, reply) => {
     console.log("> Login");
@@ -18,7 +20,7 @@ function api(fastify, opts, next) {
         console.log("connected");
       });
 
-      const token = jwt.sign({ uri }, process.env.SECRET_TOKEN, {
+      const token = jwt.sign({ uri }, secret_key, {
         expiresIn: "69d",
       });
 
@@ -55,7 +57,7 @@ function api(fastify, opts, next) {
       if (!token) {
         reply.status(200).send({ message: "Error! Token was not provided." });
       }
-      const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN);
+      const decodedToken = jwt.verify(token, secret_key);
       console.log(decodedToken.uri);
       await mongoose.connect(decodedToken.uri, { useNewUrlParser: true });
 

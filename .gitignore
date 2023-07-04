@@ -3,8 +3,11 @@
 */node_modules
 
 # production
+/build
 */build
 backend/uploads/
+app/backend
+app/frontend
 
 # misc
 .DS_Store
